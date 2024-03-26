@@ -7,7 +7,6 @@ type: hacks
 courses: { compsci: {week: 28} }
 ---
 
-<!DOCTYPE html>
 <html lang="en">
 <head>
 <meta charset="UTF-8">
@@ -87,7 +86,7 @@ button:hover {
 }
 </style>
 <script>
-async function predictPrice() 
+async function predictPrice() {
     const carat = document.getElementById('carat').value;
     const cut = document.getElementById('cut').value;
     const color = document.getElementById('color').value;
@@ -110,7 +109,7 @@ async function predictPrice()
         z: parseFloat(z)
     };
 
-    const response = await fetch('/api/diamond/predict', {
+    const response = await fetch('http://127.0.0.1:8032/api/diamond/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -125,7 +124,9 @@ async function predictPrice()
     } else {
         document.getElementById('result').textContent = 'Error: ' + result.error;
     }
+}
 
+    
 </script>
 </head>
 <body>
