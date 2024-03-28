@@ -96,7 +96,6 @@ async function predictPrice() {
     const x = document.getElementById('x').value;
     const y = document.getElementById('y').value;
     const z = document.getElementById('z').value;
-
     const data = {
         carat: parseFloat(carat),
         cut: cut,
@@ -108,7 +107,6 @@ async function predictPrice() {
         y: parseFloat(y),
         z: parseFloat(z)
     };
-
     const response = await fetch('http://127.0.0.1:8032/api/diamond/predict', {
         method: 'POST',
         headers: {
