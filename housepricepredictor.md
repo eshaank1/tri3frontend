@@ -11,8 +11,7 @@ courses: { compsci: {week: 28} }
 ### Eshaan Kumar
 
 This is a tool to predict the price of a home based on various details of the home including:
-- Location
-- Square Footage
+- Acre Lot
 - Bedrooms
 - Bathrooms
 
@@ -25,12 +24,8 @@ This is a tool to predict the price of a home based on various details of the ho
 <body>
     <h1>House Price Prediction</h1>
 
-    // The following labels create input boxes for the user
-    <label for="location">Location:</label>
-    <input type="text" id="location"><br><br>
-
-    <label for="square_footage">Square Footage:</label>
-    <input type="number" id="square_footage"><br><br>
+    <label for="acre_lot">Acre Lot:</label>
+    <input type="number" id="acre_lot"><br><br>
 
     <label for="bedrooms">Bedrooms:</label>
     <input type="number" id="bedrooms"><br><br>
@@ -38,10 +33,40 @@ This is a tool to predict the price of a home based on various details of the ho
     <label for="bathrooms">Bathrooms:</label>
     <input type="number" id="bathrooms"><br><br>
 
-    // Button for user to click and recieve a prediction
     <button onclick="predictPrice()">Predict Price</button><br><br>
 
-    <div id="result"></div>
+    <div id="predict"></div>
+
+<script>
+    function predictPrice() {
+        const acreLot = document.getElementById("acre_lot").value;
+        const bedrooms = document.getElementById("bedrooms").value;
+        const bathrooms = document.getElementById("bathrooms").value;
+
+        const requestData = {
+            "sqft": acre_lot,
+            "bedrooms": bedrooms,
+            "bathrooms": bathrooms
+        };
+
+        fetch("http://127.0.0.1:8086/api/houseprice/", {
+            method: "POST",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestData),
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("result").innerText = "Predicted Price: $" + data.predicted_price;
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            document.getElementById("result").innerText = "An error occurred. Please try again.";
+        });
+    }
+</script>
+
 
     
 </body>
