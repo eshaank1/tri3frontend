@@ -1,5 +1,5 @@
 ---
 layout: leaderboard
-permalink: /tri3frontend/leaderboard
+permalink: /leaderboard
 title: Leaderboard
 ---
