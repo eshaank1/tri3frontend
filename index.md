@@ -2,88 +2,116 @@
 layout: default
 title: Student Blog
 ---
+<html lang="en">
 
-# Tri 3 Team Repository
-Eshaan Kumar, Anagha Ashtewale, Patrick Hastings, Ninaad Kiran
-<p class="title"> Login Here! </p>
+<head>
+<script>
+    //import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
-<form action="javascript:login_user()">
-    <p><label>
-        User ID:
-        <input type="text" name="uid" id="uid" required>
-    </label></p>
-    <p><label>
-        Password:
-        <input type="password" name="password" id="password" required>
-    </label></p>
-    <p>
-        <button class="signup-button">Login</button>
-    </p>
+    function login_user() {
+      const enteredUid = document.getElementById("uid").value;
+      const enteredPassword = document.getElementById("password").value;
+      console.log("Uid = " + enteredUid)
+      console.log("Password = " + enteredPassword)
+      const signupHeaders = new Headers();
+      signupHeaders.set('111', '222');
+      
+      signupHeaders.set("Accept", "*/*");
+      signupHeaders.set("Accept-Language", "en-US,en;q=0.9");
+      signupHeaders.set("Content-Type", "application/json");
 
-</form>
+      login_api(enteredUid,enteredPassword)
+        
+      }
+    
 
-<p>Need to become a user?</p>
+    function login_api(uid, pw){
+      var myHeaders = new Headers();
+      myHeaders.append("Accept", "*/*");
+      myHeaders.append("Accept-Language", "en-US,en;q=0.9");
+      myHeaders.append("Content-Type", "application/json");
+      //myHeaders.append("Cookie", "jwt=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJfdWlkIjoidG9ueSJ9.jEShka0oXI1-uCuSTfo3ed5WRw3ASLNV0Tpn1kc5GB0");
+      myHeaders.append("Authorization", "Bearer eyJhbGciOiJIUzI1NiJ9.e30.BSQAHTECtxHe2dzC75Ijpz18pTmjDb1q6WWrJMOLlm0");
+      myHeaders.append("Cookie", "jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfdWlkIjoibWJhNCJ9.oBlUf7JKmb_rLaoAFJ55yUs-70O7NUAFE6ALOXOviUc");
 
-<a href="{{site.baseurl}}/signup">
-    <button class="signup-button">Sign Up!</button>
-</a>
+var raw = "";
 
+var requestOptions = {
+  method: 'GET',
+  headers: myHeaders,
+  body: raw,
+  redirect: 'follow'
+};
 
-<!-- <form action="javascript:signup_user()">
-    <p>
-        <button>Sign Up</button>
-    </p>
-</form> -->
+fetch("http://127.0.0.1:8057/api/users", requestOptions)
+  .then(response => response.text())
+  .then(result => console.log(result))
+  .catch(error => console.log('error', error));
 
-<!-- 
-Below JavaScript code is designed to handle user authentication in a web application. It's written to work with a backend server that uses JWT (JSON Web Tokens) for authentication.
-
-The script defines a function when the page loads. This function is triggered when the Login button in the HTML form above is pressed. 
- -->
-<script type="module">
-    // uri variable and options object are obtained from config.js
-    import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
-
-    function login_user(){
-        // Set Authenticate endpoint
-        const url = uri + '/api/users/authenticate';
-
-        // Set body of request to include login data from DOM
-        const body = {
-            uid: document.getElementById("uid").value,
-            password: document.getElementById("password").value,
-        };
-
-        // Change options according to Authentication requirements
-        const authOptions = {
-            ...options, // This will copy all properties from options
-            method: 'POST', // Override the method property
-            cache: 'no-cache', // Set the cache property
-            body: JSON.stringify(body)
-        };
-
-        // Fetch JWT
-        fetch(url, authOptions)
-        .then(response => {
-            // handle error response from Web API
-            if (!response.ok) {
-                const errorMsg = 'Login error: ' + response.status;
-                console.log(errorMsg);
-                // alert("Incorrect username or password");
-                window.location.replace("{{site.baseurl}}/403_Error?message=Incorrect+Username+or+Password");
-                return;
-            }
-            // Success!!!
-            // Redirect to the database page
-            alert("Login Successful!")
-            window.sessionStorage.username =  document.getElementById("uid").value
-            window.location.href = "{{site.baseurl}}/games";
-        })
-        // catch fetch errors (ie ACCESS to server blocked)
-        .catch(err => {
-            console.error(err);
+      var raw = JSON.stringify({
+          "uid": uid,
+          "password": pw
         });
+
+      var requestOptions = {
+          method: 'POST',
+          headers: myHeaders,
+          body: raw,
+          redirect: 'follow'
+        };
+
+      fetch("http://127.0.0.1:8057/api/users/authenticate", requestOptions)
+          .then(response => {
+            if (response.ok) {
+                console.log("User logged in successfully");
+                window.location.href = "{{site.baseurl}}/games"
+
+              } else {
+                console.error("User login failed");
+                // You can handle failed login attempts here
+                const errorMessageDiv = document.getElementById('errorMessage');
+                errorMessageDiv.innerHTML = '<label style="color: red;">User Login Failed</label>';
+              }
+          })
+          .then(result => { 
+            console.log(result);
+            
+            })
+          .catch(error => console.log('error', error));
+          
+
+      
+      //return response
     }
-    // Attach login_user to the window object, allowing access to form action
-    window.login_user = login_user;
-</script>
+
+
+  </script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login Page</title>
+  <link rel="stylesheet" href="styles.css"> <!-- Include the compiled CSS file -->
+</head>
+
+<body>
+  <!-- Your HTML login form -->
+  <div id="errorMessage"></div>
+  <form action="javascript:login_user()">
+    <p><label for="uid">User ID:</label>
+      <input type="text" name="uid" id="uid" required>
+    </p>
+    <p><label for="password">Password:</label>
+      <input type="password" name="password" id="password" required>
+    </p>
+    <p>
+     <button class="button-spacing">Log In</button>
+          <button onClick = "window.location.href ='https://drishyamody.github.io/student2/2023/01/22/Signup_page_demographics.html'" class="button-spacing" >Sign Up</button>
+
+      
+    </p>
+  </form>
+
+  <!-- Your JavaScript code -->
+  
+</body>
+
+</html>
