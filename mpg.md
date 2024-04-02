@@ -102,20 +102,30 @@ permalink: /mpg
         <button type="submit">Predict MPG</button>
     </form>
     <div id="result"></div>
+    <div class="legend">
+        <h2>Parameter Legend</h2>
+        <p><strong>Cylinders:</strong> Number of engine cylinders. More cylinders usually mean more power but less fuel efficiency.</p>
+        <p><strong>Displacement:</strong> Engine displacement in cubic centimeters. Larger engines can produce more power.</p>
+        <p><strong>Horsepower:</strong> Engine power output in horsepower. Higher horsepower indicates a more powerful engine.</p>
+        <p><strong>Weight:</strong> Vehicle weight in pounds. Heavier vehicles generally consume more fuel.</p>
+        <p><strong>Acceleration:</strong> Time in seconds to accelerate from 0 to 60 mph. Indicates vehicle's ability to gain speed.</p>
+        <p><strong>Model Year:</strong> The year the vehicle model was released. Newer models may have better fuel efficiency.</p>
+        <p><strong>Origin:</strong> The country where the vehicle was manufactured. This can influence the design and fuel efficiency.</p>
+    </div>
     <script>
     async function predictMPG() {
         const data = {
-            cylinders: document.getElementById('cylinders').value,
-            displacement: document.getElementById('displacement').value,
-            horsepower: document.getElementById('horsepower').value,
-            weight: document.getElementById('weight').value,
-            acceleration: document.getElementById('acceleration').value,
-            model_year: document.getElementById('model_year').value,
+            cylinders: parseInt(document.getElementById('cylinders').value),
+            displacement: parseFloat(document.getElementById('displacement').value),
+            horsepower: parseFloat(document.getElementById('horsepower').value),
+            weight: parseFloat(document.getElementById('weight').value),
+            acceleration: parseFloat(document.getElementById('acceleration').value),
+            model_year: parseInt(document.getElementById('model_year').value),
             origin: document.getElementById('origin').value
         };
-        
+
         try {
-            const response = await fetch('http://127.0.0.1:8055/api/mpg/predict', {
+            const response = await fetch('http://127.0.0.1:8057/api/mpg/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'
@@ -125,13 +135,9 @@ permalink: /mpg
 
             const result = await response.json();
             if (response.ok) {
-                if (result.prediction && result.prediction.length > 0) {
-                    document.getElementById('result').textContent = 'Predicted MPG: ' + result.prediction[0];
-                } else {
-                    document.getElementById('result').textContent = 'Prediction data missing or in unexpected format';
-                }
+                document.getElementById('result').textContent = 'Predicted MPG: ' + result.prediction;
             } else {
-                document.getElementById('result').textContent = 'Error: ' + (result.error || 'Problem with response');
+                document.getElementById('result').textContent = 'Error: ' + result.error;
             }
         } catch (error) {
             console.error('Error:', error);
@@ -141,4 +147,3 @@ permalink: /mpg
     </script>
 </body>
 </html>
-
