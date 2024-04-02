@@ -91,7 +91,7 @@ courses: { compsci: {week: 28} }
             const symbol = document.getElementById('stockSymbol').value;
             console.log(`Fetching data for symbol: ${symbol}`);
             
-            const response = await fetch(`http://localhost:8056/api/stockchart/chart/${symbol}`);
+            const response = await fetch(`http://localhost:8057/api/stockchart/chart/${symbol}`);
 
             if (response.ok) {
                 const data = await response.json();
