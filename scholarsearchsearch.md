@@ -83,4 +83,37 @@ title: Search
         <div id="searchResults">
         </div>
     </div>
-    
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const searchForm = document.getElementById('searchForm');
+            const searchInput = document.getElementById('searchInput');
+            const searchResults = document.getElementById('searchResults');
+
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                performSearch(searchInput.value);
+            });
+
+            function performSearch(query) {
+                // Placeholder for search logic
+                searchResults.innerHTML = ''; // Clear previous results
+
+                if (query.trim() === '') {
+                    searchResults.innerHTML = '<p>Please enter a search term.</p>';
+                    return;
+                }
+
+                // Simulating a search result
+                const resultDiv = document.createElement('div');
+                resultDiv.classList.add('searchResult');
+                resultDiv.innerHTML = `
+                    <h3>Search Result for "${query}"</h3>
+                    <p>This is a simulated search result. Replace this logic with actual search functionality.</p>
+                `;
+
+                searchResults.appendChild(resultDiv);
+            }
+        });
+    </script>
+</body>
+</html>
