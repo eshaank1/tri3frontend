@@ -35,3 +35,40 @@ title: Search
         #searchButton:hover {
             background-color: #0056b3;
         }
+        /* Search results */
+        #searchResults {
+            background-color: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+        }
+        .searchResult {
+            margin-bottom: 10px;
+            padding: 10px;
+            border-bottom: 1px solid #ccc;
+        }
+        .searchResult:last-child {
+            border-bottom: none;
+        }
+        .searchResult h3 {
+            margin: 0;
+            color: #007bff;
+        }
+        .searchResult p {
+            margin-top: 5px;
+            color: #666;
+        }
+        .flex-container {
+            display: flex;
+            align-items: left;
+            justify-content: space-between;
+        }
+        .button {
+            border-radius: 10px;
+            background-color: light gray;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding-left: 10px;
+            padding-right: 10px;
+            border: 1px solid #000;
+        }
+    </style>
