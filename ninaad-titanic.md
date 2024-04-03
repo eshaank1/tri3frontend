@@ -2,6 +2,7 @@
 permalink: /ninaad-titanic
 ---
 
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -53,7 +54,7 @@ permalink: /ninaad-titanic
 
         <button type="submit">Predict Survival</button>
     </form>
-        <div id="predictionResult"></div>
+    <div id="predictionResult"></div>
     <script>
         document.getElementById('predictionForm').addEventListener('submit', function(e) {
             e.preventDefault();
@@ -68,3 +69,26 @@ permalink: /ninaad-titanic
                 embarked: document.getElementById('embarked').value.toUpperCase(),
                 alone: document.getElementById('alone').value
             };
+
+            fetch('http://127.0.0.1:8058/api/titanic/predict', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify([formData]),
+            })
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('predictionResult').innerHTML = `
+                    <p>Decision Tree Classifier Survival Probability: ${data['DecisionTreeClassifier Survival Probability']}</p>
+                    <p>Logistic Regression Survival Probability: ${data['LogisticRegression Survival Probability']}</p>
+                `;
+            })
+            .catch((error) => {
+                console.error('Error:', error);
+            });
+        });
+    </script>
+</body>
+</html>
+
