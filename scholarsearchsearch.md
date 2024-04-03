@@ -1,10 +1,8 @@
 ---
-permalink: /scholarsearch
----
----
 layout: default
 title: Search
 ---
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -35,9 +33,6 @@ title: Search
             border: 1px solid #ccc;
             border-radius: 5px;
         }
-        #searchButton:hover {
-            background-color: #0056b3;
-        }
         /* Search results */
         #searchResults {
             background-color: white;
@@ -61,20 +56,8 @@ title: Search
             margin-top: 5px;
             color: #666;
         }
-        .flex-container {
-            display: flex;
-            align-items: left;
-            justify-content: space-between;
-        }
-        .button {
-            border-radius: 10px;
-            background-color: light gray;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            padding-left: 10px;
-            padding-right: 10px;
-            border: 1px solid #000;
-        }
     </style>
+</head>
 <body>
     <div class="container">
         <h1>College Search</h1>
@@ -101,7 +84,8 @@ title: Search
                     })
                     .catch(error => console.error('Error fetching colleges:', error));
             }
-             function performSearch(query) {
+
+            function performSearch(query) {
                 searchResults.innerHTML = ''; // Clear previous results
 
                 if (query.trim() === '') {
@@ -110,3 +94,29 @@ title: Search
                 }
 
                 const filteredResults = colleges.filter(college => college.name.toLowerCase().includes(query.toLowerCase()));
+
+                if (filteredResults.length > 0) {
+                    filteredResults.forEach(college => {
+                        const resultDiv = document.createElement('div');
+                        resultDiv.classList.add('searchResult');
+                        resultDiv.innerHTML = `
+                            <h3>${college.name}</h3>
+                            <p>${college.description}</p>
+                        `;
+                        searchResults.appendChild(resultDiv);
+                    });
+                } else {
+                    searchResults.innerHTML = '<p>No results found.</p>';
+                }
+            }
+
+            searchForm.addEventListener('submit', function(event) {
+                event.preventDefault(); // Prevent the form from submitting normally
+                performSearch(searchInput.value);
+            });
+
+            fetchColleges();
+        });
+    </script>
+</body>
+</html>
