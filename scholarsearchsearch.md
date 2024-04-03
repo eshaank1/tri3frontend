@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Search
+permalink: /scholarsearch
 ---
 <html lang="en">
 <head>
