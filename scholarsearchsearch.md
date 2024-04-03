@@ -72,3 +72,15 @@ title: Search
             border: 1px solid #000;
         }
     </style>
+</head>
+<body>
+    <div class="container">
+        <h1>College Search</h1>
+        <form id="searchForm">
+            <label for="searchInput">Search by College Name:&nbsp; </label>
+            <input type="text" id="searchInput" name="searchInput" placeholder="Enter college name">
+        </form>
+        <div id="searchResults">
+        </div>
+    </div>
+    
