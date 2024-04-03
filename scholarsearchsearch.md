@@ -1,6 +1,10 @@
 ---
 permalink: /scholarsearch
 ---
+---
+layout: default
+title: Search
+---
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -71,7 +75,6 @@ permalink: /scholarsearch
             border: 1px solid #000;
         }
     </style>
-</head>
 <body>
     <div class="container">
         <h1>College Search</h1>
@@ -87,14 +90,18 @@ permalink: /scholarsearch
             const searchForm = document.getElementById('searchForm');
             const searchInput = document.getElementById('searchInput');
             const searchResults = document.getElementById('searchResults');
+            let colleges = [];
 
-            searchForm.addEventListener('submit', function(event) {
-                event.preventDefault(); // Prevent the form from submitting normally
-                performSearch(searchInput.value);
-            });
-
-            function performSearch(query) {
-                // Placeholder for search logic
+            function fetchColleges() {
+                fetch("http://127.0.0.1:8199/dataList")
+                    .then(response => response.json())
+                    .then(result => {
+                        colleges = result; // Assuming result is an array of colleges
+                        console.log(colleges); // Debug: Log to console
+                    })
+                    .catch(error => console.error('Error fetching colleges:', error));
+            }
+             function performSearch(query) {
                 searchResults.innerHTML = ''; // Clear previous results
 
                 if (query.trim() === '') {
@@ -102,17 +109,4 @@ permalink: /scholarsearch
                     return;
                 }
 
-                // Simulating a search result
-                const resultDiv = document.createElement('div');
-                resultDiv.classList.add('searchResult');
-                resultDiv.innerHTML = `
-                    <h3>Search Result for "${query}"</h3>
-                    <p>This is a simulated search result. Replace this logic with actual search functionality.</p>
-                `;
-
-                searchResults.appendChild(resultDiv);
-            }
-        });
-    </script>
-</body>
-</html>
+                const filteredResults = colleges.filter(college => college.name.toLowerCase().includes(query.toLowerCase()));
