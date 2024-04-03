@@ -43,7 +43,7 @@ var requestOptions = {
   redirect: 'follow'
 };
 
-fetch("http://127.0.0.1:8057/api/users", requestOptions)
+fetch("http://127.0.0.1:8058/api/users", requestOptions)
   .then(response => response.text())
   .then(result => console.log(result))
   .catch(error => console.log('error', error));
@@ -60,7 +60,7 @@ fetch("http://127.0.0.1:8057/api/users", requestOptions)
           redirect: 'follow'
         };
 
-      fetch("http://127.0.0.1:8057/api/users/authenticate", requestOptions)
+      fetch("http://127.0.0.1:8058/api/users/authenticate", requestOptions)
           .then(response => {
             if (response.ok) {
                 console.log("User logged in successfully");
