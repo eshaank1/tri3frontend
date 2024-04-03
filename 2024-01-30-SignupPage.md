@@ -1,9 +1,5 @@
 ---
-toc: true
-comments: false
-layout: post
-title: Signup Page
-type: hacks
+permalink: /signup
 ---
 
 

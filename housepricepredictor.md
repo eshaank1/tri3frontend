@@ -1,10 +1,5 @@
 ---
-toc: false
-comments: false
-layout: post
-title: House Price Predictor
-type: hacks
-courses: { compsci: {week: 28} }
+permalink: /house
 ---
 
 # House Price Predictor

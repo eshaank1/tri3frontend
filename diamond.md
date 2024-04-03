@@ -1,10 +1,5 @@
 ---
-toc: true
-comments: false
-layout: post
-title: Diamond ML
-type: hacks
-courses: { compsci: {week: 28} }
+permalink: /diamond
 ---
 
 <html lang="en">

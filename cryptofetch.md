@@ -1,10 +1,5 @@
 ---
-toc: false
-comments: false
-layout: post
-title: CryptoSense
-type: hacks
-courses: { compsci: {week: 28} }
+permalink: cryptofetch
 ---
 
 

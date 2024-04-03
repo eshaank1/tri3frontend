@@ -64,7 +64,7 @@ fetch("http://127.0.0.1:8057/api/users", requestOptions)
           .then(response => {
             if (response.ok) {
                 console.log("User logged in successfully");
-                window.location.href = "{{site.baseurl}}/games"
+                window.location.href = "{{site.baseurl}}/main"
 
               } else {
                 console.error("User login failed");
@@ -104,7 +104,7 @@ fetch("http://127.0.0.1:8057/api/users", requestOptions)
     </p>
     <p>
      <button class="button-spacing">Log In</button>
-          <button onClick = "window.location.href ='https://drishyamody.github.io/student2/2023/01/22/Signup_page_demographics.html'" class="button-spacing" >Sign Up</button>
+          <button onClick = "window.location.href ='{{site.baseurl}}/signup'" class="button-spacing" >Sign Up</button>
 
       
     </p>
