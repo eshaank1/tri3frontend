@@ -53,3 +53,18 @@ permalink: /ninaad-titanic
 
         <button type="submit">Predict Survival</button>
     </form>
+        <div id="predictionResult"></div>
+    <script>
+        document.getElementById('predictionForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+
+            const formData = {
+                pclass: document.getElementById('pclass').value,
+                sex: document.getElementById('sex').value,
+                age: document.getElementById('age').value,
+                sibsp: document.getElementById('sibsp').value,
+                parch: document.getElementById('parch').value,
+                fare: document.getElementById('fare').value,
+                embarked: document.getElementById('embarked').value.toUpperCase(),
+                alone: document.getElementById('alone').value
+            };
