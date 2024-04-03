@@ -7,22 +7,79 @@ permalink: /ninaad-titanic
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-            padding: 20px;
-        }
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f4f4f4;
+        margin: 0;
+        padding: 20px;
+        color: #333;
+    }
 
-        label, input {
-            margin-bottom: 10px;
-            display: block;
-        }
+    h1 {
+        color: #0056b3;
+    }
 
-        button {
-            margin-top: 20px;
-        }
-    </style>
+    form {
+        background-color: #fff;
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    label {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        font-weight: bold;
+        display: block;
+    }
+
+    input[type="number"],
+    input[type="text"] {
+        width: 100%;
+        padding: 8px;
+        margin-bottom: 20px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+        box-sizing: border-box;
+    }
+
+    button {
+        background-color: #0056b3;
+        color: #ffffff;
+        border: none;
+        padding: 10px 20px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        border-radius: 4px;
+        transition: background-color 0.3s ease;
+    }
+
+    button:hover {
+        background-color: #004494;
+    }
+
+    #predictionResult {
+        max-width: 600px;
+        margin: 20px auto;
+        padding: 20px;
+        background-color: #964B00;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        border-radius: 8px;
+    }
+
+    #predictionResult p {
+        font-weight: bold;
+        color: #333;
+    }
+</style>
+
 </head>
 <body>
     <h1>Titanic Survival Prediction</h1>
