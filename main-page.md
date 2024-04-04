@@ -44,6 +44,14 @@ permalink: /main
         td:first-child, th:first-child {
             color: #006400; /* Dark green text */
         }
+
+        /* Body background GIF */
+        body {
+            background-image: url('{{site.baseurl}}/images/logincar.gif'); /* Add your GIF link here */
+            background-size: cover; /* Cover the entire page */
+            background-position: center; /* Center the background image */
+            background-repeat: no-repeat; /* Do not repeat the image */
+        }
     </style>
 </head>
 <body>

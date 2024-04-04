@@ -6,75 +6,80 @@ permalink: /chat
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatroom</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            background-color: #232122;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            margin: 0;
-        }
-        .chatroom {
-            width: 700px;
-            height: 600px;
-            background-color: #232122;
-            border-radius: 10px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-            overflow: hidden;
-        }
-        .chatroom-header {
-            background-color: #C13A7F;
-            color: #000;
-            text-align: center;
-            padding: 10px;
-            border-bottom: 1px solid #C13A7F;
-        }
-        .chatroom-messages {
-            max-height: 460px;
-            min-height: 460px;
-            padding: 8px;
-            overflow-y: auto;
-            background-color: #232122;
-            scrollbar-width: thin; /* for Firefox */
-            scrollbar-color: #232122 #232122; /* for Firefox */
-        }
-        .chatroom-messages::-webkit-scrollbar {
-            width: 8px; /* for Chrome, Safari, and Opera */
-        }
-        .chatroom-messages::-webkit-scrollbar-thumb {
-            background-color: #C13A7F; /* for Chrome, Safari, and Opera */
-        }
-        .chatroom-messages div {
-            background-color: #C13A7F;
-            border-radius: 5px;
-            margin: 5px 0;
-            padding: 5px;
-            word-wrap: break-word;
-        }
-        .chatroom-input {
-            padding: 10px;
-            display: flex;
-            border-top: 1px solid #FFFFFF;
-        }
-        input[type="text"] {
-            flex: 1;
-            padding: 10px;
-            border: none;
-            border-radius: 5px;
-            background-color: #C13A7F;
-            color: #FFFFFF;
-        }
-        button {
-            background-color: #C13A7F;
-            color: #FFFFFF;
-            border: none;
-            border-radius: 5px;
-            padding: 10px 20px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
+ <style>
+    body {
+        font-family: Arial, sans-serif;
+        background-color: #232122;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+        margin: 0;
+        background-image: url('{{site.baseurl}}/images/logincar.gif'); /* Add your GIF URL here */
+        background-size: cover; /* Ensure the background covers the full viewport */
+        background-position: center; /* Center the background image */
+        background-repeat: no-repeat; /* Prevent the background image from repeating */
+    }
+    .chatroom {
+        width: 700px;
+        height: 600px;
+        background-color: #232122; /* Might want to change or remove this for transparency */
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        overflow: hidden;
+    }
+    .chatroom-header {
+        background-color: #C13A7F;
+        color: #000;
+        text-align: center;
+        padding: 10px;
+        border-bottom: 1px solid #C13A7F;
+    }
+    .chatroom-messages {
+        max-height: 460px;
+        min-height: 460px;
+        padding: 8px;
+        overflow-y: auto;
+        background-color: #232122; /* Might want to adjust this for better GIF visibility */
+        scrollbar-width: thin; /* for Firefox */
+        scrollbar-color: #232122 #232122; /* for Firefox */
+    }
+    .chatroom-messages::-webkit-scrollbar {
+        width: 8px; /* for Chrome, Safari, and Opera */
+    }
+    .chatroom-messages::-webkit-scrollbar-thumb {
+        background-color: #C13A7F; /* for Chrome, Safari, and Opera */
+    }
+    .chatroom-messages div {
+        background-color: #C13A7F;
+        border-radius: 5px;
+        margin: 5px 0;
+        padding: 5px;
+        word-wrap: break-word;
+    }
+    .chatroom-input {
+        padding: 10px;
+        display: flex;
+        border-top: 1px solid #FFFFFF;
+    }
+    input[type="text"] {
+        flex: 1;
+        padding: 10px;
+        border: none;
+        border-radius: 5px;
+        background-color: #C13A7F;
+        color: #FFFFFF;
+    }
+    button {
+        background-color: #C13A7F;
+        color: #FFFFFF;
+        border: none;
+        border-radius: 5px;
+        padding: 10px 20px;
+        cursor: pointer;
+        margin-left: 10px;
+    }
+</style>
     </style>
 </head>
 <body>
@@ -94,7 +99,7 @@ permalink: /chat
     <script>
         const chatBox = document.getElementById("chatroom-messages");
         const messageInput = document.getElementById("message");
-        const backendUrl = "http://127.0.0.1:8918"; // Replace with your backend URL
+        const backendUrl = "http://127.0.0.1:8058"; // Replace with your backend URL
         function sendMessage() {
             const message = messageInput.value.trim();
             if (message !== '') {

@@ -75,7 +75,7 @@ permalink: /scholarsearch
             let colleges = [];
 
             function fetchColleges() {
-                fetch("http://127.0.0.1:8199/dataList")
+                fetch("http://127.0.0.1:8058/dataList")
                     .then(response => response.json())
                     .then(result => {
                         colleges = result; // Assuming result is an array of colleges
