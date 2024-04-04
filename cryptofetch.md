@@ -8,9 +8,6 @@ permalink: cryptofetch
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Data Fetcher</title>
-    <style> 
-
-</style>
     <style>
         @import url('https://fonts.googleapis.com/css2?family=Roboto');
         body {
@@ -65,7 +62,7 @@ permalink: cryptofetch
         p {
             color: #6c757d; /* Dark gray for text to improve readability */
         }n: 5px 0;
-        }
+
     </style>
 </head>
 <body>
