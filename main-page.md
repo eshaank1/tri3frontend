@@ -1,22 +1,48 @@
 ---
 permalink: /main
 ---
-
 <html>
 <head>
     <title>Links to projects</title>
     <style>
-        table, th, td {
-            border: 1px solid black;
+        /* Table styling with a purple theme */
+        table {
             border-collapse: collapse;
+            width: 100%;
+            box-shadow: 0 2px 15px rgba(128, 0, 128, 0.2); /* Shadow with a purple hue */
+            margin-top: 20px;
+            background-color: #f2e6ff; /* Light purple background */
         }
         th, td {
-            padding: 10px;
-            text-align: center;
+            border: 1px solid #d3bced; /* Softer purple border */
+            padding: 8px 20px;
+            text-align: left;
+            background-color: #e6ccff; /* Slightly darker purple for contrast */
         }
+        th {
+            background-color: #c29bff; /* Darker purple for headers */
+            color: #006400;
+        }
+        tr:nth-child(even) {background-color: #f2e6ff;} /* Alternating rows a lighter purple */
+        tr:hover {background-color: #d9b3ff;} /* Hover color in purple */
+
+        /* Button styling with a blue theme */
         button {
-            display: inline-block;
+            padding: 10px 15px;
+            background-color: #007bff; /* Blue background */
+            color: #006400;
+            border: none;
+            border-radius: 5px;
             cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        button:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        /* First column text styling */
+        td:first-child, th:first-child {
+            color: #006400; /* Dark green text */
         }
     </style>
 </head>
@@ -54,7 +80,6 @@ permalink: /main
         <td><button onClick="window.location.href = '{{site.baseurl}}/games';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/scholarmatch';">Link</button>
         <button onClick="window.location.href = '{{site.baseurl}}/scholarsearch';">Link</button></td>
-        <td></td>
     </tr>
 </table>
 
