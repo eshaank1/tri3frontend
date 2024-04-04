@@ -1,6 +1,5 @@
 ---
-layout: default
-title: Find Match
+permalink: /scholarmatch
 ---
 
 <html lang="en">

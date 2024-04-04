@@ -136,7 +136,6 @@ permalink: /ninaad-titanic
             .then(response => response.json())
             .then(data => {
                 document.getElementById('predictionResult').innerHTML = `
-                    <p>Decision Tree Classifier Survival Probability: ${data['DecisionTreeClassifier Survival Probability']}</p>
                     <p>Logistic Regression Survival Probability: ${data['LogisticRegression Survival Probability']}</p>
                 `;
             })
