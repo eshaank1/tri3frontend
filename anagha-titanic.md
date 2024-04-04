@@ -1,7 +1,6 @@
 ---
-permalink: /group-titanic
+permalink: /anagha-titanic
 ---
-
 
 <html lang="en">
 <head>
