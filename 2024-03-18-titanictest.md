@@ -157,7 +157,7 @@ permalink: /group-titanic
                 embarked: document.getElementById('embarked').value
             };
 
-            const response = await fetch('http://127.0.0.1:8058/api/titanicAPI/predict', {
+            const response = await fetch('http://127.0.0.1:8032/api/titanic/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',
