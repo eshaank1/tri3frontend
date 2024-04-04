@@ -31,6 +31,7 @@ This is a tool to predict the price of a home based on various details of the ho
     <button onclick="predictPrice()">Predict Price</button><br><br>
 
     <div id="predict"></div>
+    <p id="result"></p>
 
 <script>
     function predictPrice() {
@@ -39,12 +40,10 @@ This is a tool to predict the price of a home based on various details of the ho
         const bathrooms = document.getElementById("bathrooms").value;
 
         const requestData = {
-            "acre_lot": acre_lot,
+            "acre_lot": acreLot,
             "bedrooms": bedrooms,
             "bathrooms": bathrooms
         };
-
-        fetch("http://127.0.0.1:8086/api/houseprice/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
