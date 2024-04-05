@@ -89,6 +89,18 @@ permalink: /main
         <td><button onClick="window.location.href = '{{site.baseurl}}/match';">Link</button></td>
     </tr>
 </table>
-
 </body>
 </html>
+
+## About Our Project
+
+**Plans for the Integration**
+
+
+- We integrated the video sharing platform and the login system into the shared repo
+
+
+- Finally, we integrated the other CPT projects
+
+
+- Then, the different machine learning systems were integrated into the repo. (Titanic, Diamond cost predictor, MPG predictor, likelihood of car crash predictor, and house price predictor)
