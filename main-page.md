@@ -86,7 +86,7 @@ permalink: /main
         <td><button onClick="window.location.href = '{{site.baseurl}}/stockfetch';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/cryptofetch';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/games';">Link</button></td>
-        <td><button onClick="window.location.href = '{{site.baseurl}}/scholarsearch';">Link</button></td>
+        <td><button onClick="window.location.href = '{{site.baseurl}}/match';">Link</button></td>
     </tr>
 </table>
 
