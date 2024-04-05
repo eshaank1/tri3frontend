@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -10,7 +9,6 @@
             background-color: #f0f6f7; /* Soft pastel background */
             color: #333; /* Soft text color for readability */
         }
-
         #container, #recommendation-container {
             max-width: 800px;
             margin: 20px auto;
@@ -19,27 +17,22 @@
             box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
             border-radius: 10px;
         }
-
         h2, h3 {
             color: #6a7f98; /* Pastel blue for headers */
         }
-
         #options div {
             margin: 10px 0;
             background-color: #e7eff6; /* Lighter pastel background for options */
             padding: 10px;
             border-radius: 5px;
         }
-
         input[type="radio"] {
             margin-right: 8px;
         }
-
         label {
             color: #333; /* Ensuring readability */
             font-weight: 500;
         }
-
         button {
             background-color: #92a8d1; /* Pastel button background */
             color: white; /* White text on buttons */
@@ -50,7 +43,6 @@
             transition: background-color 0.3s; /* Smooth transition for hover effect */
             margin-right: 10px;
         }
-
         button:hover {
             background-color: #7491b4; /* Darker shade on hover */
         }
