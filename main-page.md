@@ -91,19 +91,20 @@ permalink: /main
 </table>
 
 </body>
-</html>
 
-<div style="background-color:#e93e91; padding: 10px;">
+<div style="background-color:#e93e91; padding: 10px; border-radius: 20px; border: 2px solid black;">
 
-<title>About Our Project</title>
-
-<header>Plans for the Integration</header>
-<break>
+<header><b>Plans for the Integration</b></header>
+<br>
 <text>
 - We integrated the video sharing platform and the login system into the shared repo
-<break>
+<br>
+<br>
 - Finally, we integrated the other CPT projects
-<break>
+<br>
+<br>
 - Then, the different machine learning systems were integrated into the repo. (Titanic, Diamond cost predictor, MPG predictor, likelihood of car crash predictor, and house price predictor)
+<br>
 </text>
 </div>
+</html>
