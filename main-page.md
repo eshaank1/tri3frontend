@@ -70,7 +70,7 @@ permalink: /main
         <td><button onClick="window.location.href = '';">Link</button></td>
         <td><button onClick="window.location.href = '';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/ninaad-titanic';">Link</button></td>
-        <td><button onClick="window.location.href = '{{site.baseurl}}/patricktitanic';">Link</button></td>
+        <td><button onClick="window.location.href = '/patricktitanic';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/anagha-titanic';">Link</button></td>
     </tr>
     <tr>
@@ -89,18 +89,21 @@ permalink: /main
         <td><button onClick="window.location.href = '{{site.baseurl}}/match';">Link</button></td>
     </tr>
 </table>
+
 </body>
 </html>
 
-## About Our Project
+<div style="background-color:#e93e91; padding: 10px;">
 
-**Plans for the Integration**
+<title>About Our Project</title>
 
-
+<header>Plans for the Integration</header>
+<break>
+<text>
 - We integrated the video sharing platform and the login system into the shared repo
-
-
+<break>
 - Finally, we integrated the other CPT projects
-
-
+<break>
 - Then, the different machine learning systems were integrated into the repo. (Titanic, Diamond cost predictor, MPG predictor, likelihood of car crash predictor, and house price predictor)
+</text>
+</div>
