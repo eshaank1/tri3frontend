@@ -70,7 +70,7 @@ permalink: /main
         <td><button onClick="window.location.href = '';">Link</button></td>
         <td><button onClick="window.location.href = '';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/ninaad-titanic';">Link</button></td>
-        <td><button onClick="window.location.href = '';">Link</button></td>
+        <td><button onClick="window.location.href = '{{site.baseurl}}/patricktitanic';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/anagha-titanic';">Link</button></td>
     </tr>
     <tr>
