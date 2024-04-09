@@ -43,7 +43,7 @@ permalink: /main
 
         .green-button {
             padding: 10px 15px;
-            background-color: #4CAF50; /* Green background */
+            background-color: #9C52B6; /* Purple background */
             color: #ffffff; /* White text for contrast */
             border: none;
             border-radius: 5px;
@@ -51,7 +51,7 @@ permalink: /main
             transition: all 0.3s ease;
         }
         .green-button:hover {
-            background-color: #367B3F; /* Darker green on hover */
+            background-color: #pink; /* Darker green on hover */
         }
 
         /* First column text styling */
