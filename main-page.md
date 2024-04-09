@@ -1,6 +1,7 @@
 ---
 permalink: /main
 ---
+
 <html>
 <head>
     <title>Links to projects</title>
@@ -30,7 +31,7 @@ permalink: /main
         button {
             padding: 10px 15px;
             background-color: #007bff; /* Blue background */
-            color: #006400;
+            color: #ffffff; /* White text */
             border: none;
             border-radius: 5px;
             cursor: pointer;
@@ -38,6 +39,19 @@ permalink: /main
         }
         button:hover {
             background-color: #0056b3; /* Darker blue on hover */
+        }
+
+        .green-button {
+            padding: 10px 15px;
+            background-color: #4CAF50; /* Green background */
+            color: #ffffff; /* White text for contrast */
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+        .green-button:hover {
+            background-color: #367B3F; /* Darker green on hover */
         }
 
         /* First column text styling */
@@ -87,10 +101,13 @@ permalink: /main
         <td><button onClick="window.location.href = '{{site.baseurl}}/cryptofetch';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/games';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/match';">Link</button></td>
+        <td><button onClick="window.location.href = '';">Link</button></td>
     </tr>
 </table>
 
-</body>
+<div style="text-align: center; margin-top: 20px;">
+    <button class="green-button" onClick="window.location.href = '{{site.baseurl}}/';">Back to Login</button>
+</div>
 
 <div style="background-color:#e93e91; padding: 10px; border-radius: 20px; border: 2px solid black;">
 
@@ -107,4 +124,6 @@ permalink: /main
 <br>
 </text>
 </div>
+
+</body>
 </html>
