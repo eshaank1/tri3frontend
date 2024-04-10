@@ -126,7 +126,7 @@ permalink: /ninaad-titanic
                 alone: document.getElementById('alone').value
             };
 
-            fetch('http://127.0.0.1:8058/api/titanic/predict', {
+            fetch('http://127.0.0.1:8059/api/titanic/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json',

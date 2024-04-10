@@ -125,7 +125,7 @@ permalink: /mpg
         };
 
         try {
-            const response = await fetch('http://127.0.0.1:8058/api/mpg/predict', {
+            const response = await fetch('http://127.0.0.1:8059/api/mpg/predict', {
                 method: 'POST',
                 headers: {
                     'Content-Type': 'application/json'

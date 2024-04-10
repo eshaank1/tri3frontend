@@ -99,7 +99,7 @@ permalink: /chat
     <script>
         const chatBox = document.getElementById("chatroom-messages");
         const messageInput = document.getElementById("message");
-        const backendUrl = "http://127.0.0.1:8058"; // Replace with your backend URL
+        const backendUrl = "http://127.0.0.1:8059"; // Replace with your backend URL
         function sendMessage() {
             const message = messageInput.value.trim();
             if (message !== '') {

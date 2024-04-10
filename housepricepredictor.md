@@ -45,7 +45,7 @@ This is a tool to predict the price of a home based on various details of the ho
             "bathrooms": bathrooms
         };
         console.log(JSON.stringify(requestData))
-        fetch("http://127.0.0.1:8058/api/houseprice/predict", {
+        fetch("http://127.0.0.1:8059/api/houseprice/predict", {
             method: "POST",
             headers: {
                 "Content-Type": "application/json",
