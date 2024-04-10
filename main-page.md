@@ -99,7 +99,7 @@ permalink: /main
         <td>CPT</td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/stockfetch';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/cryptofetch';">Link</button></td>
-        <td><button onClick="window.location.href = '{{site.baseurl}}/games';">Link</button></td>
+        <td><button onClick="window.location.href = '{{site.baseurl}}/chat';">Link</button></td>
         <td><button onClick="window.location.href = '{{site.baseurl}}/match';">Link</button></td>
         <td><button onClick="window.location.href = '';">Link</button></td>
     </tr>

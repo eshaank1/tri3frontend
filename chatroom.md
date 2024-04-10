@@ -21,7 +21,7 @@ permalink: /chat
         background-repeat: no-repeat; /* Prevent the background image from repeating */
     }
     .chatroom {
-        width: 700px;
+        width: 600px;
         height: 600px;
         background-color: #232122; /* Might want to change or remove this for transparency */
         border-radius: 10px;
