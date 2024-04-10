@@ -38,7 +38,7 @@ title: Student Blog
     button {
       width: 100%;
       padding: 10px;
-      background-color: #ffb6f1; /* black */
+      background-color: #ffb6e1; /* black */
       color: #fff; /* white */
       border: none;
       border-radius: 5px;
@@ -50,7 +50,7 @@ title: Student Blog
     }
     
     .button-spacing {
-      margin-right: 10px;
+      margin-right: 100px;
     }
     
     .signup-link {
