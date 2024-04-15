@@ -106,7 +106,7 @@ permalink: /main
 </table>
 
 <div style="text-align: center; margin-top: 20px;">
-    <button class="green-button" onClick="window.location.href = '{{site.baseurl}}/';">Back to Login</button>
+    <button class="green-button" onClick="window.location.href = '{{site.baseurl}}/';">Sign Out</button>
 </div>
 
 <div style="background-color:#e93e91; padding: 10px; border-radius: 20px; border: 2px solid black;">
