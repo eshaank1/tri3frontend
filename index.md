@@ -38,7 +38,7 @@ title: Student Blog
     button {
       width: 100%;
       padding: 10px;
-      background-color: #ffb6e1; /* black */
+      background-color: #AA336A; /* black */
       color: #fff; /* white */
       border: none;
       border-radius: 5px;
