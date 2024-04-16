@@ -57,6 +57,15 @@ This is a tool to predict the price of a northeastern US home based on various d
         const bedrooms = document.getElementById("bedrooms").value;
         const bathrooms = document.getElementById("bathrooms").value;
 
+        const acreLotInRange = acreLot >= 1 && acreLot <= 1800;
+        const bedroomsInRange = bedrooms >= 1 && bedrooms <= 11;
+        const bathroomsInRange = bathrooms >= 1 && bathrooms <= 15;
+
+        if (!acreLotInRange || !bedroomsInRange || !bathroomsInRange) {
+            document.getElementById("result").innerText = "Please enter values within the suggested range.";
+            return
+        }
+
         const requestData = {
             "acre_lot": acreLot,
             "bedrooms": bedrooms,
