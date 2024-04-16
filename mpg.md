@@ -140,16 +140,20 @@ permalink: /mpg
             });
 
             const result = await response.json();
-            if (response.ok) {
-                document.getElementById('result').textContent = 'Predicted MPG: ' + result.prediction;
-            } else {
-                document.getElementById('result').textContent = 'Error: ' + result.error;
-            }
+if (response.ok) {
+    const prediction = parseFloat(result.prediction); // Ensure it is a number
+    if (!isNaN(prediction)) { // Check if it is a valid number
+        document.getElementById('result').textContent = 'Predicted MPG: ' + prediction.toFixed(1);
+    } else {
+        document.getElementById('result').textContent = 'Error: Prediction value is not a number';
+    }
+} else {
+    document.getElementById('result').textContent = 'Error: ' + result.error;
+}
+
         } catch (error) {
             console.error('Error:', error);
             document.getElementById('result').textContent = 'Failed to fetch prediction';
         }
     }
     </script>
-
-</html>
