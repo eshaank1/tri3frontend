@@ -4,7 +4,7 @@ permalink: cryptofetch
 
 
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cryptocurrency Data Fetcher</title>
@@ -64,8 +64,8 @@ permalink: cryptofetch
         }n: 5px 0;
 
     </style>
-</head>
-<body>
+
+
     <h2>Info</h2>
     <p>Open: Price of a crypto at the beginning of a trading session (usually the first transaction of the day)</p>
     <p>High: Highest price the crypto was valued/traded at during the trading session (usually the day)</p>
@@ -117,5 +117,5 @@ permalink: cryptofetch
             document.getElementById('cryptoData').innerHTML = content;
         }
     </script>
-</body>
+
 </html>

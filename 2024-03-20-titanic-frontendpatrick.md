@@ -2,7 +2,7 @@
 permalink: /patricktitanic
 ---
 <html lang="en">
-<head> 
+ 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
@@ -68,8 +68,8 @@ permalink: /patricktitanic
             color: #333333; /* Dark gray text */
         }
     </style> 
-</head>
-<body>
+
+
     <div class="container">
         <h2>Titanic Survival Predictor</h2>
         <form id="predictionForm">
@@ -132,5 +132,5 @@ permalink: /patricktitanic
                 `Survival Prediction: ${result['LogReg Probability']}`;
         };
     </script>
-</body>
+
 </html>

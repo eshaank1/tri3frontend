@@ -8,7 +8,7 @@ type: hacks
 
 <html lang="en">
 
-<head>
+
 <script>
     //import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
@@ -78,9 +78,9 @@ type: hacks
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="styles.css"> <!-- Include the compiled CSS file -->
-</head>
 
-<body>
+
+
   <!-- Your HTML login form -->
   <div id="errorMessage"></div>
   <form action="javascript:login_user()">
@@ -100,6 +100,6 @@ type: hacks
 
   <!-- Your JavaScript code -->
   
-</body>
+
 
 </html>

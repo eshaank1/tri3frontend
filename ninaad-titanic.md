@@ -3,7 +3,7 @@ permalink: /ninaad-titanic
 ---
 
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Titanic Survival Prediction</title>
@@ -80,8 +80,8 @@ permalink: /ninaad-titanic
     }
 </style>
 
-</head>
-<body>
+
+
     <h1>Titanic Survival Prediction</h1>
     <form id="predictionForm">
         <label for="pclass">Passenger Class:</label>
@@ -144,6 +144,6 @@ permalink: /ninaad-titanic
             });
         });
     </script>
-</body>
+
 </html>
 

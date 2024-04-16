@@ -11,12 +11,12 @@ This is a tool to predict the price of a northeastern US home based on various d
 - Bathrooms
 
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>House Price Prediction</title>
-</head>
-<body>
+
+
     <h1>Northeastern US House Price Prediction</h1>
 
     <label for="acre_lot">Acre Lot:</label>
@@ -93,5 +93,5 @@ This is a tool to predict the price of a northeastern US home based on various d
 
 
     
-</body>
+
 </html>

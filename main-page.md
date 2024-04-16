@@ -3,7 +3,7 @@ permalink: /main
 ---
 
 <html>
-<head>
+
     <title>Links to projects</title>
     <style>
         /* Table styling with a purple theme */
@@ -67,8 +67,8 @@ permalink: /main
             background-repeat: no-repeat; /* Do not repeat the image */
         }
     </style>
-</head>
-<body>
+
+
 
 <table>
     <tr>
@@ -125,5 +125,5 @@ permalink: /main
 </text>
 </div>
 
-</body>
+
 </html>

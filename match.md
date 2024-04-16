@@ -1,5 +1,5 @@
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Find Match</title>
@@ -61,8 +61,8 @@
             color: #333;
         }
     </style>
-</head>
-<body>
+
+
 <div id="container">
     <h2 id="question">Question</h2>
     <div id="options"></div>
@@ -359,5 +359,5 @@ function submitAnswers() {
   
   showQuestion();
 </script>
-</body>
+
 </html>

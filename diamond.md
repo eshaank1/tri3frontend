@@ -3,7 +3,7 @@ permalink: /diamond
 ---
 
 <html lang="en">
-<head>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Diamond Price Prediction</title>
@@ -121,8 +121,8 @@ async function predictPrice() {
 
     
 </script>
-</head>
-<body>
+
+
 <h1>Diamond Price Predictor</h1>
 <form onsubmit="event.preventDefault(); predictPrice();">
     <label for="carat">Carat:</label>
@@ -204,5 +204,5 @@ async function predictPrice() {
     <p><strong>Length (x in mm), Width (y in mm), Depth (z in mm):</strong> Physical dimensions of the diamond.</p>
 </div>
 
-</body>
+
 </html>
