@@ -127,6 +127,7 @@ async function predictPrice() {
 <form onsubmit="event.preventDefault(); predictPrice();">
     <label for="carat">Carat:</label>
     <input type="number" id="carat" step="0.01" required><br>
+    <span class="info-icon" title="Suggested range: 0.1 - 10 Weight of the diamond. A higher carat value indicates a larger diamond.">&#9432;</span><br><br>
 
     <label for="cut">Cut:</label>
     <select id="cut" required>
@@ -136,6 +137,7 @@ async function predictPrice() {
         <option value="Fair">Fair</option>
         <option value="Poor">Poor</option>
     </select><br>
+    <span class="info-icon" title="Quality of the diamond's cut, affecting its symmetry, brightness, and overall visual appearance. Ranges from Poor to Ideal.">&#9432;</span><br><br>
 
     <label for="color">Color:</label>
     <select id="color" required>
@@ -148,6 +150,7 @@ async function predictPrice() {
         <option value="J">J</option>
         <!-- Add other options as needed -->
     </select><br>
+    <span class="info-icon" title="Diamond color grade, which ranges from D (colorless) to Z (a yellow or brown hue).">&#9432;</span><br><br>
 
     <label for="clarity">Clarity:</label>
     <select id="clarity" required>
@@ -161,38 +164,33 @@ async function predictPrice() {
         <option value="I1">I1</option>
         <!-- Add other options as needed -->
     </select><br>
+    <span class="info-icon" title="The absence of inclusions and blemishes. Clarity grades range from Flawless (no inclusions) to Included (obvious inclusions).">&#9432;</span><br><br>
 
     <label for="depth">Depth (%):</label>
-    <input type="number" id="depth" step="0.1" required><br>
+    <input type="number" id="depth">
+    <span class="info-icon" title="Suggested range: 1 - 10 The height of a diamond, measured from the culet to the table, divided by its average girdle diameter.">&#9432;</span><br><br>
+
 
     <label for="table">Table (%):</label>
     <input type="number" id="table" step="0.1" required><br>
+    <span class="info-icon" title="Suggested range: 1 - 10 The width of the diamond's table (top surface) expressed as a percentage of its average diameter.">&#9432;</span><br><br>
 
     <label for="x">Length (x in mm):</label>
     <input type="number" id="x" step="0.01" required><br>
+    <span class="info-icon" title="Suggested range: 0.1 - 10 Physical dimensions of the diamond">&#9432;</span><br><br>
 
     <label for="y">Width (y in mm):</label>
     <input type="number" id="y" step="0.01" required><br>
+    <span class="info-icon" title="Suggested range: 0.1 - 10 Physical dimensions of the diamond">&#9432;</span><br><br>
 
     <label for="z">Depth (z in mm):</label>
     <input type="number" id="z" step="0.01" required><br>
+    <span class="info-icon" title="Suggested range: 0.1 - 10 Physical dimensions of the diamond">&#9432;</span><br><br>
 
     <button type="submit">Predict Price</button>
 </form>
 
 <div id="result"></div>
-
-<!-- Legend explaining the parameters -->
-<div class="legend">
-    <h2>Parameter Legend</h2>
-    <p><strong>Carat:</strong> Weight of the diamond. A higher carat value indicates a larger diamond.</p>
-    <p><strong>Cut:</strong> Quality of the diamond's cut, affecting its symmetry, brightness, and overall visual appearance. Ranges from Poor to Ideal.</p>
-    <p><strong>Color:</strong> Diamond color grade, which ranges from D (colorless) to Z (a yellow or brown hue).</p>
-    <p><strong>Clarity:</strong> The absence of inclusions and blemishes. Clarity grades range from Flawless (no inclusions) to Included (obvious inclusions).</p>
-    <p><strong>Depth (%):</strong> The height of a diamond, measured from the culet to the table, divided by its average girdle diameter.</p>
-    <p><strong>Table (%):</strong> The width of the diamond's table (top surface) expressed as a percentage of its average diameter.</p>
-    <p><strong>Length (x in mm), Width (y in mm), Depth (z in mm):</strong> Physical dimensions of the diamond.</p>
-</div>
 
 </body>
 </html>
