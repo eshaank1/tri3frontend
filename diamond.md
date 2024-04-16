@@ -192,5 +192,17 @@ async function predictPrice() {
 
 <div id="result"></div>
 
+<!-- Legend explaining the parameters -->
+<div class="legend">
+    <h2>Parameter Legend</h2>
+    <p><strong>Carat:</strong> Weight of the diamond. A higher carat value indicates a larger diamond.</p>
+    <p><strong>Cut:</strong> Quality of the diamond's cut, affecting its symmetry, brightness, and overall visual appearance. Ranges from Poor to Ideal.</p>
+    <p><strong>Color:</strong> Diamond color grade, which ranges from D (colorless) to Z (a yellow or brown hue).</p>
+    <p><strong>Clarity:</strong> The absence of inclusions and blemishes. Clarity grades range from Flawless (no inclusions) to Included (obvious inclusions).</p>
+    <p><strong>Depth (%):</strong> The height of a diamond, measured from the culet to the table, divided by its average girdle diameter.</p>
+    <p><strong>Table (%):</strong> The width of the diamond's table (top surface) expressed as a percentage of its average diameter.</p>
+    <p><strong>Length (x in mm), Width (y in mm), Depth (z in mm):</strong> Physical dimensions of the diamond.</p>
+</div>
+
 </body>
 </html>
