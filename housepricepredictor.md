@@ -2,10 +2,10 @@
 permalink: /house
 ---
 
-# House Price Predictor
+# Northeastern US House Price Predictor
 ### Eshaan Kumar
 
-This is a tool to predict the price of a home based on various details of the home including:
+This is a tool to predict the price of a northeastern US home based on various details of the home including:
 - Acre Lot
 - Bedrooms
 - Bathrooms
@@ -17,7 +17,7 @@ This is a tool to predict the price of a home based on various details of the ho
     <title>House Price Prediction</title>
 </head>
 <body>
-    <h1>House Price Prediction</h1>
+    <h1>Northeastern US House Price Prediction</h1>
 
     <label for="acre_lot">Acre Lot:</label>
     <input type="number" id="acre_lot"><br><br>
