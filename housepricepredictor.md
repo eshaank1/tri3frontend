@@ -54,7 +54,8 @@ This is a tool to predict the price of a home based on various details of the ho
         })
         .then(response => response.json())
         .then(data => {
-            document.getElementById("result").innerText = "Predicted Price: $" + data.predicted_price;
+            const predictedPrice = parseFloat(data.predicted_price).toLocaleString(); // Add parseFloat() to ensure correct conversion to number before formatting
+            document.getElementById("result").innerText = "Predicted Price: $" + predictedPrice;
         })
         .catch(error => {
             console.error("Error:", error);
