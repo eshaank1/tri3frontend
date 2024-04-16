@@ -5,7 +5,7 @@ permalink: /signup
 
 <html lang="en">
 
-<head>
+
 <script>
     //import { uri, options } from '{{site.baseurl}}/assets/js/api/config.js';
 
@@ -83,9 +83,9 @@ permalink: /signup
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Login Page</title>
   <link rel="stylesheet" href="styles.css"> <!-- Include the compiled CSS file -->
-</head>
 
-<body>
+
+
     <div class="container">
     <form action="javascript:signUp_user()">
     <p><label for="Name">First Name:</label>
@@ -106,6 +106,6 @@ permalink: /signup
    
 
    
-</body>
+
 
 </html>

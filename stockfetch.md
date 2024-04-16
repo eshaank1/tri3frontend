@@ -4,7 +4,7 @@ permalink: stockfetch
 
 
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stock Data Fetcher</title>
@@ -68,8 +68,8 @@ permalink: stockfetch
             color: #6c757d; /* Dark gray for text to improve readability */
         }
     </style>
-</head>
-<body>
+
+
     <p>Open: Refers to the price of a stock at the beginning of a trading session. It represents the first transaction or trade of the day for a particular stock.</p>
     <p>High: Represents the highest price at which a stock was traded during a specific period, typically within a trading day.</p>
     <p>Low: Indicates the lowest price at which a stock was traded during a specific period, usually within a trading day.</p>
@@ -118,5 +118,5 @@ permalink: stockfetch
             document.getElementById('stockData').innerHTML = content;
         }
     </script>
-</body>
+
 </html>

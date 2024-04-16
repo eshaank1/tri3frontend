@@ -2,7 +2,7 @@
 permalink: /chat
 ---
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Chatroom</title>
@@ -81,8 +81,8 @@ permalink: /chat
     }
 </style>
     </style>
-</head>
-<body>
+
+
     <div class="chatroom">
         <div class="chatroom-header">
             <h1>Chatroom</h1>
@@ -194,5 +194,5 @@ function displayChat() {
         displayChat();
         setInterval(displayChat, 200);
     </script>
-</body>
+
 </html>

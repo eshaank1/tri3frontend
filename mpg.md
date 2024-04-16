@@ -3,7 +3,7 @@ permalink: /mpg
 ---
 
 <html lang="en">
-<head>
+
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MPG Prediction</title>
@@ -70,28 +70,34 @@ permalink: /mpg
             line-height: 1.6;
         }
     </style>
-</head>
-<body>
+
+
     <h1>MPG Predictor</h1>
     <form onsubmit="event.preventDefault(); predictMPG();">
         <label for="cylinders">Cylinders:</label>
-        <input type="number" id="cylinders" required><br>
-        
+        <input type="number" id="cylinders" required>
+        <span class="info-icon" title="Suggested range: 4 - 8">&#9432;</span><br>
+
         <label for="displacement">Displacement:</label>
-        <input type="number" id="displacement" required><br>
+        <input type="number" id="displacement" required>
+        <span class="info-icon" title="Suggested range: 70 - 430">&#9432;</span><br>
         
         <label for="horsepower">Horsepower:</label>
-        <input type="number" id="horsepower" required><br>
-        
+        <input type="number" id="horsepower" required>
+        <span class="info-icon" title="Suggested range: 40 - 240">&#9432;</span><br>
+
         <label for="weight">Weight:</label>
-        <input type="number" id="weight" required><br>
-        
+        <input type="number" id="weight" required>
+        <span class="info-icon" title="Suggested range: 1600 - 4800">&#9432;</span><br>
+
         <label for="acceleration">Acceleration:</label>
-        <input type="number" id="acceleration" required><br>
-        
+        <input type="number" id="acceleration" required><
+        <span class="info-icon" title="Suggested range: 8 - 22.5">&#9432;</span><br>
+
         <label for="model_year">Model Year:</label>
         <input type="number" id="model_year" required><br>
-        
+        <span class="info-icon" title="Suggested range: 70 - 82">&#9432;</span><br>
+
         <label for="origin">Origin:</label>
         <select id="origin" required>
             <option value="1">USA</option>
@@ -145,5 +151,5 @@ permalink: /mpg
         }
     }
     </script>
-</body>
+
 </html>
