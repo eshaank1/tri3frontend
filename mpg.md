@@ -91,7 +91,7 @@ permalink: /mpg
         <span class="info-icon" title="Suggested range: 1600 - 4800">&#9432;</span><br>
 
         <label for="acceleration">Acceleration:</label>
-        <input type="number" id="acceleration" required><
+        <input type="number" id="acceleration" required>
         <span class="info-icon" title="Suggested range: 8 - 22.5">&#9432;</span><br>
 
         <label for="model_year">Model Year:</label>
