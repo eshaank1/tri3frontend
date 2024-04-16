@@ -75,28 +75,28 @@ permalink: /mpg
     <h1>MPG Predictor</h1>
     <form onsubmit="event.preventDefault(); predictMPG();">
         <label for="cylinders">Cylinders:</label>
+        <span class="info-icon" title="Suggested range: 4 - 8">&#9432;</span>
         <input type="number" id="cylinders" required>
-        <span class="info-icon" title="Suggested range: 4 - 8">&#9432;</span><br>
 
         <label for="displacement">Displacement:</label>
+        <span class="info-icon" title="Suggested range: 70 - 430">&#9432;</span>
         <input type="number" id="displacement" required>
-        <span class="info-icon" title="Suggested range: 70 - 430">&#9432;</span><br>
         
         <label for="horsepower">Horsepower:</label>
+        <span class="info-icon" title="Suggested range: 40 - 240">&#9432;</span>
         <input type="number" id="horsepower" required>
-        <span class="info-icon" title="Suggested range: 40 - 240">&#9432;</span><br>
 
         <label for="weight">Weight:</label>
-        <input type="number" id="weight" required>
-        <span class="info-icon" title="Suggested range: 1600 - 4800">&#9432;</span><br>
+        <span class="info-icon" title="Suggested range: 1600 - 4800">&#9432;</span>
+        <input type="number" id="weight" required>    
 
         <label for="acceleration">Acceleration:</label>
+        <span class="info-icon" title="Suggested range: 8 - 22">&#9432;</span>
         <input type="number" id="acceleration" required>
-        <span class="info-icon" title="Suggested range: 8 - 22">&#9432;</span><br>
 
         <label for="model_year">Model Year:</label>
+        <span class="info-icon" title="Suggested range: 70 - 82">&#9432;</span>
         <input type="number" id="model_year" required><br>
-        <span class="info-icon" title="Suggested range: 70 - 82">&#9432;</span><br>
 
         <label for="origin">Origin:</label>
         <select id="origin" required>
