@@ -20,18 +20,36 @@ This is a tool to predict the price of a northeastern US home based on various d
     <h1>Northeastern US House Price Prediction</h1>
 
     <label for="acre_lot">Acre Lot:</label>
-    <input type="number" id="acre_lot"><br><br>
+    <input type="number" id="acre_lot">
+    <span class="info-icon" title="Suggested range: 1 - 1800">&#9432;</span><br><br>
+
 
     <label for="bedrooms">Bedrooms:</label>
-    <input type="number" id="bedrooms"><br><br>
+    <input type="number" id="bedrooms">
+    <span class="info-icon" title="Suggested range: 1 - 11">&#9432;</span><br><br>
+
 
     <label for="bathrooms">Bathrooms:</label>
-    <input type="number" id="bathrooms"><br><br>
+    <input type="number" id="bathrooms">
+    <span class="info-icon" title="Suggested range: 1 - 15">&#9432;</span><br><br>
+
 
     <button onclick="predictPrice()">Predict Price</button><br><br>
 
     <div id="predict"></div>
     <p id="result"></p>
+
+<style>
+    .info-icon {
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+
+    .info-icon:hover {
+        color: blue;
+    }
+</style>
 
 <script>
     function predictPrice() {
