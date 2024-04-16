@@ -92,7 +92,7 @@ permalink: /mpg
 
         <label for="acceleration">Acceleration:</label>
         <input type="number" id="acceleration" required>
-        <span class="info-icon" title="Suggested range: 8 - 22.5">&#9432;</span><br>
+        <span class="info-icon" title="Suggested range: 8 - 22">&#9432;</span><br>
 
         <label for="model_year">Model Year:</label>
         <input type="number" id="model_year" required><br>
