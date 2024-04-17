@@ -69,6 +69,14 @@ permalink: /mpg
             font-size: 14px;
             line-height: 1.6;
         }
+            .info-icon {
+        margin-left: 5px;
+        cursor: pointer;
+        font-size: 18px;
+    }
+    .info-icon:hover {
+        color: blue;
+    }
     </style>
 
 
