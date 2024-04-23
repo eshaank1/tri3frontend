@@ -119,7 +119,21 @@ This is a tool to predict the price of a northeastern US home based on various d
         });
     }
 
-    
+    function loadSettings() {
+        fetch("http://127.0.0.1:8059/api/houseprice/settings", {
+            method: "GET",
+        })
+        .then(response => response.json())
+        .then(data => {
+            document.getElementById("acre_lot").value = data.acre_lot || '';
+            document.getElementById("bedrooms").value = data.bedrooms || '';
+            document.getElementById("bathrooms").value = data.bathrooms || '';
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred while loading settings. Please try again.");
+        });
+    }
 
     // Load settings when the page loads
     window.addEventListener('load', loadSettings);
