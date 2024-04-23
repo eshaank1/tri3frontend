@@ -35,10 +35,10 @@ This is a tool to predict the price of a northeastern US home based on various d
 
 
     <button onclick="predictPrice()">Predict Price</button><br><br>
+    <button onclick="saveSettings()">Save Settings</button><br><br>
 
     <div id="predict"></div>
     <p id="result"></p>
-
 <style>
     .info-icon {
         margin-left: 5px;
@@ -89,6 +89,41 @@ This is a tool to predict the price of a northeastern US home based on various d
             document.getElementById("result").innerText = "An error occurred. Please try again.";
         });
     }
+
+    function saveSettings() {
+        const acreLot = document.getElementById("acre_lot").value;
+        const bedrooms = document.getElementById("bedrooms").value;
+        const bathrooms = document.getElementById("bathrooms").value;
+        const requestData = {
+            "acre_lot": acreLot,
+            "bedrooms": bedrooms,
+            "bathrooms": bathrooms
+        };
+        fetch("http://127.0.0.1:8059/api/houseprice/settings", {
+            method: "POST", // Change method to POST
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(requestData),
+        })
+        .then(response => {
+            if (response.ok) {
+                alert("Settings saved successfully!");
+            } else {
+                alert("Failed to save settings. Please try again.");
+            }
+        })
+        .catch(error => {
+            console.error("Error:", error);
+            alert("An error occurred. Please try again.");
+        });
+    }
+
+    
+
+    // Load settings when the page loads
+    window.addEventListener('load', loadSettings);
+
 </script>
 
 
