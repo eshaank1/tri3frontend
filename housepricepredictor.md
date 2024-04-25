@@ -53,17 +53,29 @@ This is a tool to predict the price of a northeastern US home based on various d
 
 <script>
     function predictPrice() {
-        const acreLot = document.getElementById("acre_lot").value;
-        const bedrooms = document.getElementById("bedrooms").value;
-        const bathrooms = document.getElementById("bathrooms").value;
+        // Create constants for each of the user input values
+        const acreLot = parseInt(document.getElementById("acre_lot").value);
+        const bedrooms = parseInt(document.getElementById("bedrooms").value);
+        const bathrooms = parseInt(document.getElementById("bathrooms").value);
 
-        const acreLotInRange = acreLot >= 1 && acreLot <= 1800;
-        const bedroomsInRange = bedrooms >= 1 && bedrooms <= 11;
-        const bathroomsInRange = bathrooms >= 1 && bathrooms <= 15;
+        // Create list for the 3 inputs
+        const inputs = [acreLot, bedrooms, bathrooms];
 
-        if (!acreLotInRange || !bedroomsInRange || !bathroomsInRange) {
-            document.getElementById("result").innerText = "Please enter values within the suggested range.";
-            return
+        // Create a list with nested dictionaries for each variable along with its ranges
+        const inputFields = [
+            { id: "acre_lot", range: { min: 1, max: 1800 } },
+            { id: "bedrooms", range: { min: 1, max: 11 } },
+            { id: "bathrooms", range: { min: 1, max: 15 } }
+        ];
+
+        // Iterate through for loop along with conditional if statement to ensure inputs are within range
+        for (let i = 0; i < inputs.length; i++) {
+            const value = inputs[i];
+            const range = inputFields[i].range; // Get the range from inputFields array
+            if (value < range.min || value > range.max) {
+                document.getElementById("result").innerText = "Please enter values within the suggested range.";
+                return;
+            }
         }
 
         const requestData = {
@@ -139,8 +151,4 @@ This is a tool to predict the price of a northeastern US home based on various d
     window.addEventListener('load', loadSettings);
 
 </script>
-
-
-    
-
 </html>
