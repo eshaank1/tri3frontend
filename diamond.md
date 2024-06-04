@@ -102,7 +102,7 @@ async function predictPrice() {
         y: parseFloat(y),
         z: parseFloat(z)
     };
-    const response = await fetch('http://127.0.0.1:8059/api/diamond/predict', {
+    const response = await fetch('http://127.0.0.1:8089/api/diamond/predict', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
